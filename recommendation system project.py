@@ -32,7 +32,7 @@ selected_movie_name = st.selectbox(
         'Which number do you like best?',
         movies['original_title_x'].values)
 
-#'You selected: ', option
+
 if st.button('Recommend'):
     names,posters=recommend(selected_movie_name)
     col1,col2,col3,col4,col5=st.beta_columns(5)
@@ -52,5 +52,3 @@ if st.button('Recommend'):
         st.text(names[4])
         st.image(posters[4])
 
-    #for i in recommendations:
-       # st.write(i)
